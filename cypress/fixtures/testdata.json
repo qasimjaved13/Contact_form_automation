@@ -1,0 +1,13 @@
+{
+  "WorkEmailAddress": "Test123@ymail.com",
+  "FirstName": "Test",
+  "LastName": "User",
+  "WorkPhone":1234567890,
+  "Ext":123,
+  "Company":"Company-ABC",
+  "CompanyWebsite":"https://www.google.com/",
+  "YourJobTitle":"SQA Engineer",
+  "Position":"Senoir Test Engineer",
+  "ZipCodeORlocatoin":44000,
+  "tellusgoals":"I want to work as senior test engineer, please help me to get the relevant job"
+}
