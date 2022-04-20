@@ -1,0 +1,206 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 5,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-04-20T17:21:34.613Z",
+    "end": "2022-04-20T17:22:02.643Z",
+    "duration": 28030,
+    "testsRegistered": 6,
+    "passPercent": 83.33333333333334,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e9d63cdd-fd81-440b-b79d-d4d76ae91a44",
+      "title": "",
+      "fullFile": "cypress/integration/Testcases/contactUs.js",
+      "file": "cypress/integration/Testcases/contactUs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5f963038-a032-41d0-b71b-cc9d7a57f123",
+          "title": "Test Suite: Contact-Us form",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Form should be submitted containing all fields",
+              "fullTitle": "Test Suite: Contact-Us form Form should be submitted containing all fields",
+              "timedOut": null,
+              "duration": 13329,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "7a344e65-8995-4228-8a7a-a71746438f99",
+              "parentUUID": "5f963038-a032-41d0-b71b-cc9d7a57f123",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Form should not be submitted without Work Email Address",
+              "fullTitle": "Test Suite: Contact-Us form Form should not be submitted without Work Email Address",
+              "timedOut": null,
+              "duration": 3143,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "a0138e46-6032-41a3-ab95-d38149a2fd80",
+              "parentUUID": "5f963038-a032-41d0-b71b-cc9d7a57f123",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Form should be submitted with Mandatory fields",
+              "fullTitle": "Test Suite: Contact-Us form Form should be submitted with Mandatory fields",
+              "timedOut": null,
+              "duration": 4303,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "7042bde7-cb52-49d1-aa2e-211ce4315855",
+              "parentUUID": "5f963038-a032-41d0-b71b-cc9d7a57f123",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify sections labels",
+              "fullTitle": "Test Suite: Contact-Us form Verify sections labels",
+              "timedOut": null,
+              "duration": 514,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "2b1cce3b-1722-4f4b-a97f-5f06a3976d77",
+              "parentUUID": "5f963038-a032-41d0-b71b-cc9d7a57f123",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Terms and conditions link should be working fine",
+              "fullTitle": "Test Suite: Contact-Us form Terms and conditions link should be working fine",
+              "timedOut": null,
+              "duration": 4653,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://uat.jobot.com/terms-and-conditions' to equal 'https://uat.jobot.com/terms-and-conditions123'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://uat.jobot.com/terms-and-conditions' to equal 'https://uat.jobot.com/terms-and-conditions123'\n    at Context.eval (https://uat.jobot.com/__cypress/tests?p=cypress\\integration\\Testcases\\contactUs.js:287:14)",
+                "diff": "- 'https://uat.jobot.com/terms-and-conditions'\n+ 'https://uat.jobot.com/terms-and-conditions123'\n"
+              },
+              "uuid": "d36f428a-2f0a-45b0-bfee-59e3ac4510a5",
+              "parentUUID": "5f963038-a032-41d0-b71b-cc9d7a57f123",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Privacy Polcy link should be working fine",
+              "fullTitle": "Test Suite: Contact-Us form Privacy Polcy link should be working fine",
+              "timedOut": null,
+              "duration": 1940,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "8ae7a666-b68f-4657-99af-954b1af556d9",
+              "parentUUID": "5f963038-a032-41d0-b71b-cc9d7a57f123",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7a344e65-8995-4228-8a7a-a71746438f99",
+            "a0138e46-6032-41a3-ab95-d38149a2fd80",
+            "7042bde7-cb52-49d1-aa2e-211ce4315855",
+            "2b1cce3b-1722-4f4b-a97f-5f06a3976d77",
+            "8ae7a666-b68f-4657-99af-954b1af556d9"
+          ],
+          "failures": [
+            "d36f428a-2f0a-45b0-bfee-59e3ac4510a5"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 27882,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "Test-Report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": false
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "code": false,
+        "overwrite": false,
+        "reportFilename": "Test-Report",
+        "autoOpen": false,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
