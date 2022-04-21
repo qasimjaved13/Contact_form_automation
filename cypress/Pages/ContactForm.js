@@ -55,5 +55,21 @@ class contactForm {
     emailrequiredvalidation() {
         return cy.contains('Email required')
     }
+
+    TopHeadersLabels(){
+        return cy.contains('Top talent is only 30-seconds away!')
+    }
+
+    BelowHeadersLabels(){
+        return cy.contains('What position(s) are you hiring for?')
+    }
+
+    termsAndConditionlink(){
+        cy.get('.text-subtitle2 > [href="/terms-and-conditions"]').click()
+    }
+
+    privacyAndPolicylink(){
+        cy.get('.text-subtitle2 > [href="/privacy-policy"]').click()
+    }
 }
 export default contactForm

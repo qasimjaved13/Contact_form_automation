@@ -9,7 +9,7 @@
         "code": false,
         "overwrite": false,
         "reportFilename": "Test-Report",
-        "autoOpen": false,
+        "autoOpen": true,
         "charts": true
     }
 }

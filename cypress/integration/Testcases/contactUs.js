@@ -7,16 +7,19 @@ const cf = new contactForm()
 const confpage = new confirmationPage()
 
 describe('Test Suite: Contact-Us form', () => {
+
+    beforeEach(() => {
+        cf.navigate()
+        Cypress.on('uncaught:exception', (err, runnable) => {
+            // returning false here prevents Cypress from
+            // failing the test
+            return false
+        })
+    })
+
     it('Form should be submitted containing all fields', () => {
         cy.fixture('testdata').then(function (data) {
             this.data = data
-
-            cf.navigate()
-
-            Cypress.on('uncaught:exception', (err, runnable) => {
-                return false
-            })
-
             cf.enterWorkEmailAddress(this.data.WorkEmailAddress)
             cf.enterFirstName(this.data.FirstName)
             cf.enterLastName(this.data.LastName)
@@ -29,70 +32,44 @@ describe('Test Suite: Contact-Us form', () => {
             cf.enterPosition(this.data.Position)
             cf.enterZipCodeORlocatoin(this.data.ZipCodeORlocatoin)
             cf.selectRemotebutton()
+            cf.entertellus(this.data.tellusgoals)
             cf.clickOnSubmitButton()
             confpage.confirmationMessage().should('exist')
         })
     })
 
-    it('Form should not be submitted without Work Email Address', () => {
-        cf.navigate()
-
-        Cypress.on('uncaught:exception', (err, runnable) => {
-            return false
-        })
-
+    it('Form should not be submitted without Mandatory fields', () => {
         cf.clickOnSubmitButton()
         cf.emailrequiredvalidation().should('exist')
     })
 
-    it('Form should be submitted with Mandatory fields', () => {
+    it('Form should be submitted without non-mandatory fields', () => {
         cy.fixture('testdata').then(function (data) {
             this.data = data
-
-            cf.navigate('/')
-
-            Cypress.on('uncaught:exception', (err, runnable) => {
-                // returning false here prevents Cypress from
-                // failing the test
-                return false
-            })
-
             cf.enterWorkEmailAddress(this.data.WorkEmailAddress)
             cf.clickOnSubmitButton()
             confpage.confirmationMessage().should('exist')
         })
     })
 
-    it('Verify sections labels',()=>{
-        cf.navigate('/')
-
-            Cypress.on('uncaught:exception', (err, runnable) => {
-                return false
-            })
-
-        cy.contains('Top talent is only 30-seconds away!').should('exist')
-        cy.contains(' What position(s) are you hiring for? ').should('exist')
+    it('Verify Headers labels', () => {
+        cf.TopHeadersLabels().should('exist')
+        cf.BelowHeadersLabels().should('exist')
     })
 
-    it('Terms and conditions link should be working fine',()=>{
-        cf.navigate('/')
-
-        Cypress.on('uncaught:exception', (err, runnable) => {
-            return false
+    it('Terms and conditions link should be working fine', () => {
+        cy.fixture('testdata').then(function (data) {
+            this.data = data
+            cf.termsAndConditionlink()
+            cy.url().should('be.equal', this.data.TermsAndConditionPageURL)
         })
-        cy.get('.text-subtitle2 > [href="/terms-and-conditions"]').click()
-        cy.url().should('be.equal', 'https://uat.jobot.com/terms-and-conditions')
-
     })
 
-    it('Privacy Polcy link should be working fine',()=>{
-        cf.navigate('/')
-
-        Cypress.on('uncaught:exception', (err, runnable) => {
-            return false
+    it('Privacy Polcy link should be working fine', () => {
+        cy.fixture('testdata').then(function (data) {
+            this.data = data
+            cf.privacyAndPolicylink()
+            cy.url().should('be.equal', this.data.PrivacyAndPolicyPageURL)
         })
-        cy.get('.text-subtitle2 > [href="/privacy-policy"]').click()
-        cy.url().should('be.equal', 'https://uat.jobot.com/privacy-policy')
-
     })
 })
